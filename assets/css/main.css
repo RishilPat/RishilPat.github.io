@@ -3181,12 +3181,39 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		padding: 10em 0 4.75em 0 ;
+		padding: 10em 0 4.75em 0;
+		position: relative;
+		overflow: hidden;
 	}
+
+		#banner:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 200%;
+			height: 100%;
+			background-image: url('../../images/tiles.png');
+			background-repeat: repeat;
+			animation: slide-left 40s linear infinite;
+			z-index: -1;
+			opacity: 0.15;
+		}
+
+		@keyframes slide-left {
+			0% {
+				transform: translateX(0);
+			}
+			100% {
+				transform: translateX(-50%);
+			}
+		}
 
 		#banner .inner {
 			margin: 0 auto;
 			width: 55em;
+			position: relative;
+			z-index: 2;
 		}
 
 		#banner .logo {
