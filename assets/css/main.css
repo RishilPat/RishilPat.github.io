@@ -27,24 +27,24 @@
     --background-dark: #2e3141;
     
     /* Home page colors */
-    --home-primary: rgb(46, 61, 75);
-    --home-secondary: #374c5a;
+    --home-primary: rgb(94, 168,180);
+    --home-secondary: #366771;
     
     /* About page colors */
-    --about-primary: rgb(48, 63, 88);
-    --about-secondary: #34435d;
+    --about-primary: rgb(27, 74, 132);
+    --about-secondary: #4e81cb;
     
     /* Skills page colors */
-    --skills-primary: rgb(64, 55, 77);
-    --skills-secondary: #4e3d57;
+    --skills-primary: rgb(27, 74, 132);
+    --skills-secondary: #2a6b4c;
     
     /* Interests page colors */
-    --interests-primary: rgb(59, 69, 78);
-    --interests-secondary: #405054;
+    --interests-primary: rgb(122, 42, 92);
+    --interests-secondary: #ad518a;
     
     /* Other pages colors */
-    --other-primary: rgba(45, 60, 80, 1.0);
-    --other-secondary: #4c5c96;
+    --other-primary: rgb(94, 168, 180);
+    --other-secondary: #366771;
 }
 
 html, body, div, span, applet, object,
