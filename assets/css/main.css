@@ -3174,6 +3174,22 @@ input, select, textarea {
 		-webkit-transition: -webkit-filter 0.25s ease;
 		-ms-transition: -ms-filter 0.25s ease;
 		transition: filter 0.25s ease;
+		position: relative;
+		overflow: hidden;
+	}
+	
+	#page-wrapper:before {
+		content: '';
+		position: fixed;
+		top: -15px;
+		left: 0;
+		width: 200%;
+		height: calc(200% + 30px);
+		background-image: url('../../images/tiles2.png');
+		background-repeat: repeat;
+		animation: slide-left 32s linear infinite;
+		z-index: -1;
+		opacity: 0.15;
 	}
 
 	/* Menu styles removed */
@@ -3183,22 +3199,7 @@ input, select, textarea {
 	#banner {
 		padding: 10em 0 4.75em 0;
 		position: relative;
-		overflow: hidden;
 	}
-
-		#banner:before {
-			content: '';
-			position: absolute;
-			top: -15px;
-			left: 0;
-			width: 200%;
-			height: calc(200% + 30px);
-			background-image: url('../../images/tiles.png');
-			background-repeat: repeat;
-			animation: slide-left 32s linear infinite;
-			z-index: -1;
-			opacity: 0.15;
-		}
 
 		@keyframes slide-left {
 			0% {
@@ -3455,9 +3456,10 @@ input, select, textarea {
 	}
 
 	.wrapper {
-		background-color: #2e3141;
+		background-color: rgba(46, 49, 65, 0.9);
 		margin: 6.5em 0;
 		position: relative;
+		z-index: 1;
 	}
 
 		.wrapper:before, .wrapper:after {
