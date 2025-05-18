@@ -27,7 +27,7 @@
     --background-dark: #2e3141;
     
     /* Home page colors */
-    --home-primary: rgb(94, 168,180);
+    --home-primary: rgb(94,168,180);
     --home-secondary: #366771;
     
     /* About page colors */
@@ -3669,6 +3669,8 @@ body.page-interests ul.pagination li > .page.active {
 		/* Default background color - will be overridden by page-specific colors */
 		background-color: rgba(46, 49, 65, 1.0);
 	}
+	
+	/* Restore original margins for home page */
 
 		/* Page-specific wrapper background colors */
 		body.page-home .wrapper {
@@ -3700,6 +3702,12 @@ body.page-other .wrapper {
 			background-color: inherit;
 			clip-path: polygon(100% 0, 100% 100%, 0 100%);
 		}
+		
+		/* Remove background images from triangular transitions on home page */
+body.page-home .wrapper:before, 
+body.page-home .wrapper:after {
+	background-image: none;
+}
 
 		.wrapper:before {
 			left: 0;
@@ -3736,6 +3744,24 @@ body.page-other .wrapper {
 
 			.wrapper.style2:before, .wrapper.style2:after {
 				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23353849%3B' /%3E%3C/svg%3E");
+			}
+			
+			/* Remove all SVG background images for the home page wrapper sections */
+			body.page-home .wrapper.style2:before, 
+			body.page-home .wrapper.style2:after,
+			body.page-home .wrapper.spotlight:before,
+			body.page-home .wrapper.spotlight:after,
+			body.page-home .wrapper.spotlight.style2:before,
+			body.page-home .wrapper.spotlight.style2:after,
+			body.page-home .wrapper.spotlight.style3:before,
+			body.page-home .wrapper.spotlight.style3:after,
+			body.page-home .wrapper.spotlight.style4:before,
+			body.page-home .wrapper.spotlight.style4:after,
+			body.page-home .wrapper.spotlight.style5:before,
+			body.page-home .wrapper.spotlight.style5:after,
+			body.page-home .wrapper.spotlight.style6:before,
+			body.page-home .wrapper.spotlight.style6:after {
+				background-image: none;
 			}
 
 			.wrapper.style3 {
