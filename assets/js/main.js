@@ -142,4 +142,29 @@
 
 			});
 
+	// Add page-specific class to body based on current page
+	document.addEventListener('DOMContentLoaded', function() {
+		// Get the current page filename
+		const path = window.location.pathname;
+		const page = path.split("/").pop();
+		
+		// Determine which page we're on
+		let pageClass = '';
+		
+		if (page === '' || page === 'index.html') {
+			pageClass = 'page-home';
+		} else if (page === 'about.html') {
+			pageClass = 'page-about';
+		} else if (page === 'skills.html') {
+			pageClass = 'page-skills';
+		} else if (page === 'interests.html') {
+			pageClass = 'page-interests';
+		} else {
+			pageClass = 'page-other';
+		}
+		
+		// Add the appropriate class to the body
+		document.body.classList.add(pageClass);
+	});
+
 })(jQuery);

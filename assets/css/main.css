@@ -3185,7 +3185,7 @@ input, select, textarea {
 		left: 0;
 		width: 200%;
 		height: calc(200% + 30px);
-		background-image: url('../../images/tiles2.png');
+		background-image: url('../../images/tiles/home-tiles.png');
 		background-repeat: repeat;
 		animation: slide-left 40s linear infinite;
 		z-index: -1;
@@ -4065,4 +4065,75 @@ input, select, textarea {
 /* One Section */
 #one.wrapper.spotlight {
     background-color: #0094c9; /* Changed from #4c5c96 to #0094c9 */
+}
+
+/* Page-specific tiled backgrounds */
+body.page-home #page-wrapper:before {
+	content: '';
+	position: fixed;
+	top: -15px;
+	left: 0;
+	width: 200%;
+	height: calc(200% + 30px);
+	background-image: url('../../images/tiles/tiles.png');
+	background-repeat: repeat;
+	animation: slide-left 40s linear infinite;
+	z-index: -1;
+	opacity: 0.15;
+}
+
+body.page-about #page-wrapper:before {
+	content: '';
+	position: fixed;
+	top: -15px;
+	left: 0;
+	width: 200%;
+	height: calc(200% + 30px);
+	background-image: url('../../images/tiles/tiles_about.png');
+	background-repeat: repeat;
+	animation: slide-left 40s linear infinite;
+	z-index: -1;
+	opacity: 0.15;
+}
+
+body.page-skills #page-wrapper:before {
+	content: '';
+	position: fixed;
+	top: -15px;
+	left: 0;
+	width: 200%;
+	height: calc(200% + 30px);
+	background-image: url('../../images/tiles/tiles_skills.png');
+	background-repeat: repeat;
+	animation: slide-left 40s linear infinite;
+	z-index: -1;
+	opacity: 0.15;
+}
+
+body.page-interests #page-wrapper:before {
+	content: '';
+	position: fixed;
+	top: -15px;
+	left: 0;
+	width: 200%;
+	height: calc(200% + 30px);
+	background-image: url('../../images/tiles/tiles_interests.png');
+	background-repeat: repeat;
+	animation: slide-left 40s linear infinite;
+	z-index: -1;
+	opacity: 0.15;
+}
+
+body.page-other #page-wrapper:before {
+	content: '';
+	position: fixed;
+	top: -15px;
+	left: 0;
+	width: 200%;
+	height: calc(200% + 30px);
+	background-image: url('../../images/tiles/tiles.png');
+	background-repeat: repeat;
+	animation: slide-left 40s linear infinite;
+	z-index: -1;
+	opacity: 0.15;
 }
