@@ -3076,7 +3076,7 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background-color: rgba(53, 56, 73, 0.95);
+		background-color: rgba(53, 56, 73, 0.98); /* increased opacity from 0.95 to 0.98 */
 		height: 3.5em;
 		left: 0;
 		line-height: 3.5em;
@@ -3187,7 +3187,7 @@ input, select, textarea {
 		height: calc(200% + 30px);
 		background-image: url('../../images/tiles2.png');
 		background-repeat: repeat;
-		animation: slide-left 32s linear infinite;
+		animation: slide-left 40s linear infinite;
 		z-index: -1;
 		opacity: 0.15;
 	}
@@ -3215,6 +3215,7 @@ input, select, textarea {
 			width: 55em;
 			position: relative;
 			z-index: 2;
+			background-color: transparent; /* Removed any background color/opacity */
 		}
 
 		#banner .logo {
@@ -4059,4 +4060,9 @@ input, select, textarea {
     .header-nav li a {
         font-size: 0.7em;
     }
+}
+
+/* One Section */
+#one.wrapper.spotlight {
+    background-color: #0094c9; /* Changed from #4c5c96 to #0094c9 */
 }
