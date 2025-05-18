@@ -3199,6 +3199,8 @@ input, select, textarea {
 	#banner {
 		padding: 10em 0 4.75em 0;
 		position: relative;
+		background-color: transparent;
+		background-image: none;
 	}
 
 		@keyframes slide-left {
@@ -3297,12 +3299,8 @@ input, select, textarea {
 
 			#banner {
 				padding: 7em 0 8.25em 0 ;
-				background-color: #2e3141;
-				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-				background-size: auto,
- cover;
-				background-position: center,
- center;
+				background-color: transparent;
+				background-image: none;
 				margin-bottom: -6.5em;
 			}
 
@@ -3313,6 +3311,8 @@ input, select, textarea {
 			#banner {
 				padding: 12em 3em 12.375em 3em ;
 				margin-bottom: -4.75em;
+				background-color: transparent;
+				background-image: none;
 			}
 
 				#banner .inner {
@@ -3326,6 +3326,8 @@ input, select, textarea {
 			#banner {
 				padding: 5em 2em 4.25em 2em ;
 				margin-bottom: -2.5em;
+				background-color: transparent;
+				background-image: none;
 			}
 
 				#banner .logo {
@@ -4161,23 +4163,23 @@ body.page-other #page-wrapper:before {
 
 /* Page-specific wrapper background colors */
 body.page-home .wrapper {
-	background-color: rgb(55, 121, 129);
+	background-color: rgb(108, 207, 218);
 }
 
 body.page-home .wrapper:before, body.page-home .wrapper:after {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23377981%3B' /%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%236c6f76%3B' /%3E%3C/svg%3E");
 }
 
 body.page-about .wrapper {
-	background-color: rgb(90, 159, 251);
+	background-color: rgb(21, 90, 164);
 }
 
 body.page-about .wrapper:before, body.page-about .wrapper:after {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%235a9ffb%3B' /%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23155a9f%3B' /%3E%3C/svg%3E");
 }
 
 body.page-skills .wrapper {
-	background-color: rgb(214, 92, 163);
+	background-color: rgb(147, 37, 101);
 }
 
 body.page-skills .wrapper:before, body.page-skills .wrapper:after {
@@ -4201,35 +4203,35 @@ body.page-other .wrapper:before, body.page-other .wrapper:after {
 }
 
 body.page-home .wrapper:before {
-	box-shadow: inset 0 -1px 0 0 #2e3141, 0 1px 0 0 #2e3141;
+	box-shadow: inset 0 -1px 0 0 #6ccfda, 0 1px 0 0 #6ccfda;
 }
 
 body.page-home .wrapper:after {
-	box-shadow: inset 0 -1px 0 0 #2e3141, 0 1px 0 0 #2e3141;
+	box-shadow: inset 0 -1px 0 0 #6ccfda, 0 1px 0 0 #6ccfda;
 }
 
 body.page-about .wrapper:before {
-	box-shadow: inset 0 -1px 0 0 #026afb, 0 1px 0 0 #026afb;
+	box-shadow: inset 0 -1px 0 0 #155a9f, 0 1px 0 0 #155a9f;
 }
 
 body.page-about .wrapper:after {
-	box-shadow: inset 0 -1px 0 0 #026afb, 0 1px 0 0 #026afb;
+	box-shadow: inset 0 -1px 0 0 #155a9f, 0 1px 0 0 #155a9f;
 }
 
 body.page-skills .wrapper:before {
-	box-shadow: inset 0 -1px 0 0 #b300ff, 0 1px 0 0 #b300ff;
+	box-shadow: inset 0 -1px 0 0 #932565, 0 1px 0 0 #932565;
 }
 
 body.page-skills .wrapper:after {
-	box-shadow: inset 0 -1px 0 0 #b300ff, 0 1px 0 0 #b300ff;
+	box-shadow: inset 0 -1px 0 0 #932565, 0 1px 0 0 #932565;
 }
 
 body.page-interests .wrapper:before {
-	box-shadow: inset 0 -1px 0 0 #006847, 0 1px 0 0 #006847;
+	box-shadow: inset 0 -1px 0 0 #114027, 0 1px 0 0 #114027;
 }
 
 body.page-interests .wrapper:after {
-	box-shadow: inset 0 -1px 0 0 #006847, 0 1px 0 0 #006847;
+	box-shadow: inset 0 -1px 0 0 #114027, 0 1px 0 0 #114027;
 }
 
 body.page-other .wrapper:before {
