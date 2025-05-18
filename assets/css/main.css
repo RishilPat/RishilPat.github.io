@@ -140,7 +140,7 @@ input, select, textarea {
 
 	body {
 		background-color: #2e3141;
-		background-image: url("../../images/stars.jpg");
+		background-image: none;
 		background-size: cover;
 		background-attachment: fixed;
 		background-position: center;
@@ -3270,11 +3270,11 @@ body.page-interests ul.pagination li > .page.active {
 		left: 0;
 		width: 200%;
 		height: 200%;
-		background-image: url('../../images/stars.jpg');
+		background-image: url('../../images/tiles/tiles.png');
 		background-repeat: repeat;
 		animation: slide-left 40s linear infinite;
 		z-index: -1;
-		opacity: 0.50;
+		opacity: 0.75;
 	}
 
 	/* Menu styles removed */
@@ -3282,12 +3282,12 @@ body.page-interests ul.pagination li > .page.active {
 /* Banner */
 
 	#banner {
-		padding: 10em 0 4.75em 0;
-		position: relative;
-		background-color: transparent;
-		background-image: none;
-		z-index: 1;
-	}
+	padding: 10em 0 4.75em 0;
+	position: relative;
+	background-color: transparent;
+	background-image: none;
+	z-index: 1;
+}
 
 		@keyframes slide-left {
 			0% {
@@ -3496,9 +3496,9 @@ body.page-interests ul.pagination li > .page.active {
 	@media screen and (max-width: 1280px) {
 
 		#wrapper > header {
-			padding: 9em 0 6.25em 0 ;
-			background-color: #2e3141;
-			background-image: url("../../images/stars.jpg");
+			padding: 9em 0 6.25em 0;
+			background-color: transparent;
+			background-image: none;
 			background-size: cover;
 			background-position: center 0% 30%;
 			margin-bottom: -6.5em;
@@ -4005,8 +4005,8 @@ body.page-other .wrapper {
 	@media screen and (max-width: 1280px) {
 
 		#footer {
-			background-color: #2e3141;
-			background-image: url("../../images/stars.jpg");
+			background-color: transparent;
+			background-image: none;
 			background-size: cover;
 			background-position: center;
 			margin-top: -6.5em;
@@ -4185,22 +4185,27 @@ body.page-other #one.wrapper.spotlight {
 /* Page-specific tiled backgrounds */
 body.page-home #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles.png');
+	opacity: 0.75;
 }
 
 body.page-about #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles_about.png');
+	opacity: 0.75;
 }
 
 body.page-skills #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles_skills.png');
+	opacity: 0.75;
 }
 
 body.page-interests #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles_interests.png');
+	opacity: 0.75;
 }
 
 body.page-other #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles.png');
+	opacity: 0.75;
 }
 
 @keyframes slide-left {
