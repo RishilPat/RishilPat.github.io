@@ -31,16 +31,16 @@
     --home-secondary: #366771;
     
     /* About page colors */
-    --about-primary: rgb(27, 74, 132);
-    --about-secondary: #4e81cb;
+    --about-primary: rgb(39, 88, 149);
+    --about-secondary: #275895;
+    
+	/* Interests page colors */
+    --interests-primary: rgb(27, 74, 132);
+    --interests-secondary: #4e81cb;
     
     /* Skills page colors */
-    --skills-primary: rgb(27, 74, 132);
-    --skills-secondary: #2a6b4c;
-    
-    /* Interests page colors */
-    --interests-primary: rgb(122, 42, 92);
-    --interests-secondary: #ad518a;
+    --skills-primary: rgb(122, 42, 92);
+    --skills-secondary: #ad518a;
     
     /* Other pages colors */
     --other-primary: rgb(94, 168, 180);
