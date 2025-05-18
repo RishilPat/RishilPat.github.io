@@ -7,6 +7,46 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* Color Configuration
+   -------------------------------------------------- 
+   Modify these variables to change colors across the site
+   
+   HOW TO USE:
+   1. Change the color values below to customize the site's appearance
+   2. Each page has both primary and secondary colors:
+      - Primary colors are used for the main wrapper sections
+      - Secondary colors are used for buttons, highlights, and accents
+   
+   3. Text colors remain white (var(--text-color)) throughout the site
+   4. To add a new color theme, add new variables and create page-specific CSS classes
+*/
+:root {
+    /* Global colors */
+    --text-color: #ffffff;
+    --text-color-light: rgba(255, 255, 255, 0.35);
+    --background-dark: #2e3141;
+    
+    /* Home page colors */
+    --home-primary: rgb(108, 207, 218);
+    --home-secondary: #0094c9;
+    
+    /* About page colors */
+    --about-primary: rgb(21, 90, 164);
+    --about-secondary: #7985b0;
+    
+    /* Skills page colors */
+    --skills-primary: rgb(147, 37, 101);
+    --skills-secondary: #d65c99;
+    
+    /* Interests page colors */
+    --interests-primary: rgb(17, 64, 39);
+    --interests-secondary: #45a049;
+    
+    /* Other pages colors */
+    --other-primary: rgba(45, 60, 80, 1.0);
+    --other-secondary: #4c5c96;
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -123,12 +163,12 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: #ffffff;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 16.5pt;
-		font-weight: 300;
-		line-height: 1.65;
-	}
+	color: var(--text-color);
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 16.5pt;
+	font-weight: 300;
+	line-height: 1.65;
+}
 
 		@media screen and (max-width: 1680px) {
 
@@ -171,19 +211,19 @@ input, select, textarea {
 		}
 
 	a {
-		-moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
-		color: #ffffff;
-		text-decoration: none;
-	}
+	-moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	border-bottom: dotted 1px var(--text-color-light);
+	color: var(--text-color);
+	text-decoration: none;
+}
 
-		a:hover {
-			border-bottom-color: transparent;
-			color: #ffffff !important;
-		}
+	a:hover {
+		border-bottom-color: transparent;
+		color: var(--text-color) !important;
+	}
 
 		a.special:not(.button) {
 			text-decoration: none;
@@ -238,9 +278,9 @@ input, select, textarea {
 			}
 
 	strong, b {
-		color: #ffffff;
-		font-weight: 600;
-	}
+	color: var(--text-color);
+	font-weight: 600;
+}
 
 	em, i {
 		font-style: italic;
@@ -251,13 +291,13 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
-		font-family: Raleway, Helvetica, sans-serif;
-		font-weight: 700;
-		letter-spacing: 0.1em;
-		margin: 0 0 1em 0;
-		text-transform: uppercase;
-	}
+	color: var(--text-color);
+	font-family: Raleway, Helvetica, sans-serif;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	margin: 0 0 1em 0;
+	text-transform: uppercase;
+}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 			color: inherit;
@@ -2745,8 +2785,24 @@ input, select, textarea {
 				}
 
 				ul.pagination li > .page.active {
-					background-color: #4c5c96;
-				}
+	background-color: var(--other-secondary);
+}
+
+body.page-home ul.pagination li > .page.active {
+	background-color: var(--home-secondary);
+}
+
+body.page-about ul.pagination li > .page.active {
+	background-color: var(--about-secondary);
+}
+
+body.page-skills ul.pagination li > .page.active {
+	background-color: var(--skills-secondary);
+}
+
+body.page-interests ul.pagination li > .page.active {
+	background-color: var(--interests-secondary);
+}
 
 			ul.pagination li:first-child {
 				padding-right: 0.75em;
@@ -2909,29 +2965,61 @@ input, select, textarea {
 		}
 
 		input[type="submit"].primary,
-		input[type="reset"].primary,
-		input[type="button"].primary,
-		button.primary,
-		.button.primary {
-			background-color: #4c5c96;
-			box-shadow: none;
+	input[type="reset"].primary,
+	input[type="button"].primary,
+	button.primary,
+	.button.primary {
+		background-color: var(--other-secondary);
+		box-shadow: none;
+	}
+
+		body.page-home input[type="submit"].primary,
+		body.page-home input[type="reset"].primary,
+		body.page-home input[type="button"].primary,
+		body.page-home button.primary,
+		body.page-home .button.primary {
+			background-color: var(--home-secondary);
 		}
 
-			input[type="submit"].primary:hover,
-			input[type="reset"].primary:hover,
-			input[type="button"].primary:hover,
-			button.primary:hover,
-			.button.primary:hover {
-				background-color: #53639e;
-			}
+		body.page-about input[type="submit"].primary,
+		body.page-about input[type="reset"].primary,
+		body.page-about input[type="button"].primary,
+		body.page-about button.primary,
+		body.page-about .button.primary {
+			background-color: var(--about-secondary);
+		}
 
-			input[type="submit"].primary:active,
-			input[type="reset"].primary:active,
-			input[type="button"].primary:active,
-			button.primary:active,
-			.button.primary:active {
-				background-color: #45558d;
-			}
+		body.page-skills input[type="submit"].primary,
+		body.page-skills input[type="reset"].primary,
+		body.page-skills input[type="button"].primary,
+		body.page-skills button.primary,
+		body.page-skills .button.primary {
+			background-color: var(--skills-secondary);
+		}
+
+		body.page-interests input[type="submit"].primary,
+		body.page-interests input[type="reset"].primary,
+		body.page-interests input[type="button"].primary,
+		body.page-interests button.primary,
+		body.page-interests .button.primary {
+			background-color: var(--interests-secondary);
+		}
+
+		input[type="submit"].primary:hover,
+		input[type="reset"].primary:hover,
+		input[type="button"].primary:hover,
+		button.primary:hover,
+		.button.primary:hover {
+			opacity: 0.9;
+		}
+
+		input[type="submit"].primary:active,
+		input[type="reset"].primary:active,
+		input[type="button"].primary:active,
+		button.primary:active,
+		.button.primary:active {
+			opacity: 0.8;
+		}
 
 			input[type="submit"].primary.icon:before,
 			input[type="reset"].primary.icon:before,
@@ -3469,24 +3557,24 @@ input, select, textarea {
 
 		/* Page-specific wrapper background colors */
 		body.page-home .wrapper {
-			background-color: rgb(108, 207, 218);
-		}
+	background-color: var(--home-primary);
+}
 
-		body.page-about .wrapper {
-			background-color: rgb(21, 90, 164);
-		}
+body.page-about .wrapper {
+	background-color: var(--about-primary);
+}
 
-		body.page-skills .wrapper {
-			background-color: rgb(147, 37, 101);
-		}
+body.page-skills .wrapper {
+	background-color: var(--skills-primary);
+}
 
-		body.page-interests .wrapper {
-			background-color: rgb(17, 64, 39);
-		}
+body.page-interests .wrapper {
+	background-color: var(--interests-primary);
+}
 
-		body.page-other .wrapper {
-			background-color: rgba(45, 60, 80, 1.0);
-		}
+body.page-other .wrapper {
+	background-color: var(--other-primary);
+}
 
 		.wrapper:before, .wrapper:after {
 			content: '';
@@ -4081,7 +4169,24 @@ input, select, textarea {
 
 /* One Section */
 #one.wrapper.spotlight {
-    background-color: #0094c9; /* Changed from #4c5c96 to #0094c9 */
+    background-color: var(--other-secondary);
+}
+
+/* Spotlight sections for all pages using secondary colors */
+body.page-about #one.wrapper.spotlight {
+    background-color: var(--about-secondary);
+}
+
+body.page-skills #one.wrapper.spotlight {
+    background-color: var(--skills-secondary);
+}
+
+body.page-interests #one.wrapper.spotlight {
+    background-color: var(--interests-secondary);
+}
+
+body.page-other #one.wrapper.spotlight {
+    background-color: var(--other-secondary);
 }
 
 /* Page-specific tiled backgrounds */
@@ -4114,69 +4219,129 @@ body.page-other #page-wrapper:before {
 	}
 }
 
-/* Page-specific diagonal separators */
+/* Page-specific diagonal separators - using CSS mask instead of SVG for better color variable support */
 body.page-home .wrapper:before, 
 body.page-home .wrapper:after {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgb(108, 207, 218)%3B' /%3E%3C/svg%3E");
+	background-color: var(--home-primary);
+	-webkit-mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23ffffff%3B' /%3E%3C/svg%3E");
+	mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23ffffff%3B' /%3E%3C/svg%3E");
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: 100% 100%;
+	mask-size: 100% 100%;
+	background-image: none;
 }
 
 body.page-about .wrapper:before, 
 body.page-about .wrapper:after {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgb(21, 90, 164)%3B' /%3E%3C/svg%3E");
+	background-color: var(--about-primary);
+	-webkit-mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23ffffff%3B' /%3E%3C/svg%3E");
+	mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23ffffff%3B' /%3E%3C/svg%3E");
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: 100% 100%;
+	mask-size: 100% 100%;
+	background-image: none;
 }
 
 body.page-skills .wrapper:before, 
 body.page-skills .wrapper:after {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgb(147, 37, 101)%3B' /%3E%3C/svg%3E");
+	background-color: var(--skills-primary);
+	-webkit-mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23ffffff%3B' /%3E%3C/svg%3E");
+	mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23ffffff%3B' /%3E%3C/svg%3E");
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: 100% 100%;
+	mask-size: 100% 100%;
+	background-image: none;
 }
 
 body.page-interests .wrapper:before, 
 body.page-interests .wrapper:after {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgb(17, 64, 39)%3B' /%3E%3C/svg%3E");
+	background-color: var(--interests-primary);
+	-webkit-mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23ffffff%3B' /%3E%3C/svg%3E");
+	mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23ffffff%3B' /%3E%3C/svg%3E");
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: 100% 100%;
+	mask-size: 100% 100%;
+	background-image: none;
 }
 
 body.page-other .wrapper:before, 
 body.page-other .wrapper:after {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(45, 60, 80, 1.0)%3B' /%3E%3C/svg%3E");
+	background-color: var(--other-primary);
+	-webkit-mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23ffffff%3B' /%3E%3C/svg%3E");
+	mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23ffffff%3B' /%3E%3C/svg%3E");
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: 100% 100%;
+	mask-size: 100% 100%;
+	background-image: none;
 }
 
 /* Box shadows for diagonal separators */
 body.page-home .wrapper:before {
-	box-shadow: inset 0 -1px 0 0 rgb(108, 207, 218), 0 1px 0 0 rgb(108, 207, 218);
+	box-shadow: inset 0 -1px 0 0 var(--home-primary), 0 1px 0 0 var(--home-primary);
 }
 
 body.page-home .wrapper:after {
-	box-shadow: inset 0 -1px 0 0 rgb(108, 207, 218), 0 1px 0 0 rgb(108, 207, 218);
+	box-shadow: inset 0 -1px 0 0 var(--home-primary), 0 1px 0 0 var(--home-primary);
 }
 
 body.page-about .wrapper:before {
-	box-shadow: inset 0 -1px 0 0 rgb(21, 90, 164), 0 1px 0 0 rgb(21, 90, 164);
+	box-shadow: inset 0 -1px 0 0 var(--about-primary), 0 1px 0 0 var(--about-primary);
 }
 
 body.page-about .wrapper:after {
-	box-shadow: inset 0 -1px 0 0 rgb(21, 90, 164), 0 1px 0 0 rgb(21, 90, 164);
+	box-shadow: inset 0 -1px 0 0 var(--about-primary), 0 1px 0 0 var(--about-primary);
 }
 
 body.page-skills .wrapper:before {
-	box-shadow: inset 0 -1px 0 0 rgb(147, 37, 101), 0 1px 0 0 rgb(147, 37, 101);
+	box-shadow: inset 0 -1px 0 0 var(--skills-primary), 0 1px 0 0 var(--skills-primary);
 }
 
 body.page-skills .wrapper:after {
-	box-shadow: inset 0 -1px 0 0 rgb(147, 37, 101), 0 1px 0 0 rgb(147, 37, 101);
+	box-shadow: inset 0 -1px 0 0 var(--skills-primary), 0 1px 0 0 var(--skills-primary);
 }
 
 body.page-interests .wrapper:before {
-	box-shadow: inset 0 -1px 0 0 rgb(17, 64, 39), 0 1px 0 0 rgb(17, 64, 39);
+	box-shadow: inset 0 -1px 0 0 var(--interests-primary), 0 1px 0 0 var(--interests-primary);
 }
 
 body.page-interests .wrapper:after {
-	box-shadow: inset 0 -1px 0 0 rgb(17, 64, 39), 0 1px 0 0 rgb(17, 64, 39);
+	box-shadow: inset 0 -1px 0 0 var(--interests-primary), 0 1px 0 0 var(--interests-primary);
 }
 
 body.page-other .wrapper:before {
-	box-shadow: inset 0 -1px 0 0 rgba(45, 60, 80, 1.0), 0 1px 0 0 rgba(45, 60, 80, 1.0);
+	box-shadow: inset 0 -1px 0 0 var(--other-primary), 0 1px 0 0 var(--other-primary);
 }
 
 body.page-other .wrapper:after {
-	box-shadow: inset 0 -1px 0 0 rgba(45, 60, 80, 1.0), 0 1px 0 0 rgba(45, 60, 80, 1.0);
+	box-shadow: inset 0 -1px 0 0 var(--other-primary), 0 1px 0 0 var(--other-primary);
+}
+
+/* Page-specific One Section for home page */
+body.page-home #one.wrapper.spotlight {
+    background-color: var(--home-primary);
+}
+
+body.page-home #one.wrapper.spotlight:before, 
+body.page-home #one.wrapper.spotlight:after {
+    background-color: var(--home-primary);
+    -webkit-mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23ffffff%3B' /%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23ffffff%3B' /%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    background-image: none;
+}
+
+body.page-home #one.wrapper.spotlight:before {
+    box-shadow: inset 0 -1px 0 0 var(--home-primary), 0 1px 0 0 var(--home-primary);
+}
+
+body.page-home #one.wrapper.spotlight:after {
+    box-shadow: inset 0 -1px 0 0 var(--home-primary), 0 1px 0 0 var(--home-primary);
 }
