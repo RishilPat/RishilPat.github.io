@@ -140,7 +140,7 @@ input, select, textarea {
 
 	body {
 		background-color: #2e3141;
-		background-image: url("../../images/bg.jpg");
+		background-image: url("../../images/stars.jpg");
 		background-size: cover;
 		background-attachment: fixed;
 		background-position: center;
@@ -3498,7 +3498,7 @@ body.page-interests ul.pagination li > .page.active {
 		#wrapper > header {
 			padding: 9em 0 6.25em 0 ;
 			background-color: #2e3141;
-			background-image: url("../../images/bg.jpg");
+			background-image: url("../../images/stars.jpg");
 			background-size: cover;
 			background-position: center 0% 30%;
 			margin-bottom: -6.5em;
@@ -4006,7 +4006,7 @@ body.page-other .wrapper {
 
 		#footer {
 			background-color: #2e3141;
-			background-image: url("../../images/bg.jpg");
+			background-image: url("../../images/stars.jpg");
 			background-size: cover;
 			background-position: center;
 			margin-top: -6.5em;
