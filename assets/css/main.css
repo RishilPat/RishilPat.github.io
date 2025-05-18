@@ -4219,11 +4219,11 @@ body.page-about .wrapper:after {
 }
 
 body.page-skills .wrapper:before {
-	box-shadow: inset 0 -1px 0 0 #932565, 0 1px 0 0 #932565;
+	box-shadow: inset 0 -1px 0 0 #d65c99, 0 1px 0 0 #d65c99;
 }
 
 body.page-skills .wrapper:after {
-	box-shadow: inset 0 -1px 0 0 #932565, 0 1px 0 0 #932565;
+	box-shadow: inset 0 -1px 0 0 #d65c99, 0 1px 0 0 #d65c99;
 }
 
 body.page-interests .wrapper:before {
