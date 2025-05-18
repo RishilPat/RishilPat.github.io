@@ -35,8 +35,8 @@
     --about-secondary: #275895;
     
 	/* Interests page colors */
-    --interests-primary: rgb(27, 74, 132);
-    --interests-secondary: #4e81cb;
+    --interests-primary: rgb(27, 60, 46);
+    --interests-secondary: #2a6b4c;
     
     /* Skills page colors */
     --skills-primary: rgb(122, 42, 92);
@@ -3270,11 +3270,8 @@ body.page-interests ul.pagination li > .page.active {
 		left: 0;
 		width: 200%;
 		height: 200%;
-		background-image: url('../../images/tiles/tiles.png');
 		background-repeat: repeat;
-		animation: slide-left 40s linear infinite;
 		z-index: -1;
-		opacity: 0.75;
 	}
 
 	/* Menu styles removed */
@@ -4059,34 +4056,104 @@ body.page-other #one.wrapper.spotlight {
 body.page-home #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles.png');
 	opacity: 0.75;
+	animation: slide-left 40s linear infinite;
 }
 
 body.page-about #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles_about.png');
 	opacity: 0.75;
+	animation: slide-right 40s linear infinite;
 }
 
 body.page-skills #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles_skills.png');
 	opacity: 0.75;
+	animation: slide-diagonal-down-right 40s linear infinite;
 }
 
 body.page-interests #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles_interests.png');
 	opacity: 0.75;
+	animation: slide-diagonal-up-left 40s linear infinite;
 }
 
 body.page-other #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles.png');
 	opacity: 0.75;
+	animation: slide-left 40s linear infinite;
 }
 
+/* Animation keyframes for all directions */
 @keyframes slide-left {
 	0% {
 		transform: translateX(0);
 	}
 	100% {
 		transform: translateX(-50%);
+	}
+}
+
+@keyframes slide-right {
+	0% {
+		transform: translateX(-50%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slide-up {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-50%);
+	}
+}
+
+@keyframes slide-down {
+	0% {
+		transform: translateY(-50%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+/* Diagonal animations for combined movement */
+@keyframes slide-diagonal-down-right {
+	0% {
+		transform: translate(-50%, -50%);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes slide-diagonal-up-right {
+	0% {
+		transform: translate(-50%, 0);
+	}
+	100% {
+		transform: translate(0, -50%);
+	}
+}
+
+@keyframes slide-diagonal-down-left {
+	0% {
+		transform: translate(0, -50%);
+	}
+	100% {
+		transform: translate(-50%, 0);
+	}
+}
+
+@keyframes slide-diagonal-up-left {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(-50%, -50%);
 	}
 }
 
@@ -4100,3 +4167,22 @@ body.page-home #one.wrapper.spotlight {
 body.page-home #one.wrapper.spotlight {
     background-color: var(--home-primary);
 }
+
+/* Animation utility classes for combined movements */
+body.move-diagonal-up-left #page-wrapper:before {
+	animation: slide-diagonal-up-left 40s linear infinite !important;
+}
+
+body.move-diagonal-up-right #page-wrapper:before {
+	animation: slide-diagonal-up-right 40s linear infinite !important;
+}
+
+body.move-diagonal-down-left #page-wrapper:before {
+	animation: slide-diagonal-down-left 40s linear infinite !important;
+}
+
+body.move-diagonal-down-right #page-wrapper:before {
+	animation: slide-diagonal-down-right 40s linear infinite !important;
+}
+
+/* Page-specific One Section for home page */
