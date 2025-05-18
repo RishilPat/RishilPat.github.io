@@ -3270,11 +3270,11 @@ body.page-interests ul.pagination li > .page.active {
 		left: 0;
 		width: 200%;
 		height: 200%;
-		background-image: url('../../images/tiles/home-tiles.png');
+		background-image: url('../../images/stars.jpg');
 		background-repeat: repeat;
 		animation: slide-left 40s linear infinite;
 		z-index: -1;
-		opacity: 0.15;
+		opacity: 0.50;
 	}
 
 	/* Menu styles removed */
