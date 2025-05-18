@@ -29,22 +29,26 @@
     /* Home page colors */
     --home-primary: rgb(94,168,180);
     --home-secondary: #366771;
+	--home-tertiary: #51acbd;
     
     /* About page colors */
     --about-primary: rgb(79,130,204);
     --about-secondary: #235490;
+	--about-tertiary: #5890e0;
     
 	/* Interests page colors */
     --interests-primary: rgb(27, 60, 46);
     --interests-secondary: #2a6b4c;
+	--interests-tertiary: #38a171;
     
     /* Skills page colors */
     --skills-primary: rgb(122, 42, 92);
     --skills-secondary: #ad518a;
-    
+	--skills-tertiary: #e46db3;
     /* Other pages colors */
     --other-primary: rgb(94, 168, 180);
     --other-secondary: #366771;
+	--other-tertiary: #51acbd;
 }
 
 html, body, div, span, applet, object,
@@ -3246,20 +3250,37 @@ body.page-interests ul.pagination li > .page.active {
 /* Header */
 
 	#header {
-		-moz-transition: background-color 0.2s ease-in-out;
-		-webkit-transition: background-color 0.2s ease-in-out;
-		-ms-transition: background-color 0.2s ease-in-out;
-		transition: background-color 0.2s ease-in-out;
-		background-color: rgba(53, 56, 73, 0.98); /* increased opacity from 0.95 to 0.98 */
-		height: 3.5em;
-		left: 0;
-		line-height: 3.5em;
-		padding: 0 1.25em;
-		position: fixed;
-		top: 0;
-		width: 100%;
-		z-index: 10000;
-	}
+	-moz-transition: background-color 0.2s ease-in-out;
+	-webkit-transition: background-color 0.2s ease-in-out;
+	-ms-transition: background-color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out;
+	background-color: rgba(53, 56, 73, 0.98); /* increased opacity from 0.95 to 0.98 */
+	height: 3.5em;
+	left: 0;
+	line-height: 3.5em;
+	padding: 0 1.25em;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10000;
+	border-bottom: 3px solid var(--other-tertiary);
+}
+
+body.page-home #header {
+	border-bottom: 3px solid var(--home-tertiary);
+}
+
+body.page-about #header {
+	border-bottom: 3px solid var(--about-tertiary);
+}
+
+body.page-skills #header {
+	border-bottom: 3px solid var(--skills-tertiary);
+}
+
+body.page-interests #header {
+	border-bottom: 3px solid var(--interests-tertiary);
+}
 
 		#header h1 {
 			-moz-transition: opacity 0.2s ease-in-out, visibility 0.2s;
@@ -3416,6 +3437,27 @@ body.page-interests ul.pagination li > .page.active {
 				text-align: center;
 				width: 2.25em;
 			}
+			
+			/* Page-specific banner logo icon borders */
+			body.page-home #banner .logo .icon {
+				border-color: var(--home-tertiary);
+			}
+			
+			body.page-about #banner .logo .icon {
+				border-color: var(--about-tertiary);
+			}
+			
+			body.page-skills #banner .logo .icon {
+				border-color: var(--skills-tertiary);
+			}
+			
+			body.page-interests #banner .logo .icon {
+				border-color: var(--interests-tertiary);
+			}
+			
+			body.page-other #banner .logo .icon {
+				border-color: var(--other-tertiary);
+			}
 
 		#banner h2 {
 			-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, -moz-filter 0.25s ease;
@@ -3443,19 +3485,23 @@ body.page-interests ul.pagination li > .page.active {
 		
 		/* Page-specific banner heading borders */
 		body.page-home #banner h2 {
-			border-bottom: solid 2px var(--home-secondary);
+			border-bottom: solid 2px var(--home-tertiary);
 		}
 		
 		body.page-about #banner h2 {
-			border-bottom: solid 2px var(--about-secondary);
+			border-bottom: solid 2px var(--about-tertiary);
 		}
 		
 		body.page-skills #banner h2 {
-			border-bottom: solid 2px var(--skills-secondary);
+			border-bottom: solid 2px var(--skills-tertiary);
 		}
 		
 		body.page-interests #banner h2 {
-			border-bottom: solid 2px var(--interests-secondary);
+			border-bottom: solid 2px var(--interests-tertiary);
+		}
+		
+		body.page-other #banner h2 {
+			border-bottom: solid 2px var(--other-tertiary);
 		}
 
 		#banner p {
@@ -4135,6 +4181,27 @@ body.page-home .wrapper:after {
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* Page-specific header nav hover colors */
+body.page-home .header-nav li a:hover {
+    color: var(--home-tertiary);
+}
+
+body.page-about .header-nav li a:hover {
+    color: var(--about-tertiary);
+}
+
+body.page-skills .header-nav li a:hover {
+    color: var(--skills-tertiary);
+}
+
+body.page-interests .header-nav li a:hover {
+    color: var(--interests-tertiary);
+}
+
+body.page-other .header-nav li a:hover {
+    color: var(--other-tertiary);
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 980px) {
     .header-nav {
@@ -4206,30 +4273,40 @@ body.page-home #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles.png');
 	opacity: 0.75;
 	animation: slide-diagonal-down-left 40s linear infinite;
+	border-top: 2px solid var(--home-tertiary);
+	border-left: 2px solid var(--home-tertiary);
 }
 
 body.page-about #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles_about.png');
 	opacity: 0.75;
 	animation: slide-diagonal-up-right 40s linear infinite;
+	border-top: 2px solid var(--about-tertiary);
+	border-left: 2px solid var(--about-tertiary);
 }
 
 body.page-skills #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles_skills.png');
 	opacity: 0.75;
 	animation: slide-diagonal-down-right 40s linear infinite;
+	border-top: 2px solid var(--skills-tertiary);
+	border-left: 2px solid var(--skills-tertiary);
 }
 
 body.page-interests #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles_interests.png');
 	opacity: 0.75;
 	animation: slide-diagonal-up-left 40s linear infinite;
+	border-top: 2px solid var(--interests-tertiary);
+	border-left: 2px solid var(--interests-tertiary);
 }
 
 body.page-other #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles.png');
 	opacity: 0.75;
 	animation: slide-left 40s linear infinite;
+	border-top: 2px solid var(--other-tertiary);
+	border-left: 2px solid var(--other-tertiary);
 }
 
 /* Animation keyframes for all directions */
@@ -4310,7 +4387,7 @@ body.page-other #page-wrapper:before {
 
 /* Page-specific One Section for home page */
 body.page-home #one.wrapper.spotlight {
-    background-color: var(--home-secondary);
+    background-color: var(--home-primary);
 }
 
 /* Animation utility classes for combined movements */
