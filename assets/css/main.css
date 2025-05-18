@@ -31,8 +31,8 @@
     --home-secondary: #366771;
     
     /* About page colors */
-    --about-primary: rgb(39, 88, 149);
-    --about-secondary: #275895;
+    --about-primary: rgb(79,130,204);
+    --about-secondary: #235490;
     
 	/* Interests page colors */
     --interests-primary: rgb(27, 60, 46);
@@ -310,6 +310,27 @@ input, select, textarea {
 			padding-bottom: 1em;
 			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 		}
+		
+		/* Page-specific heading borders */
+		body.page-home h1.major, body.page-home h2.major, body.page-home h3.major, 
+		body.page-home h4.major, body.page-home h5.major, body.page-home h6.major {
+			border-bottom: solid 2px var(--home-secondary);
+		}
+		
+		body.page-about h1.major, body.page-about h2.major, body.page-about h3.major,
+		body.page-about h4.major, body.page-about h5.major, body.page-about h6.major {
+			border-bottom: solid 2px var(--about-secondary);
+		}
+		
+		body.page-skills h1.major, body.page-skills h2.major, body.page-skills h3.major,
+		body.page-skills h4.major, body.page-skills h5.major, body.page-skills h6.major {
+			border-bottom: solid 2px var(--skills-secondary);
+		}
+		
+		body.page-interests h1.major, body.page-interests h2.major, body.page-interests h3.major,
+		body.page-interests h4.major, body.page-interests h5.major, body.page-interests h6.major {
+			border-bottom: solid 2px var(--interests-secondary);
+		}
 
 	h2 {
 		font-size: 1.2em;
@@ -394,6 +415,23 @@ input, select, textarea {
 
 		hr.major {
 			margin: 4em 0;
+		}
+		
+		/* Page-specific horizontal rules */
+		body.page-home hr {
+			border-bottom: solid 2px var(--home-secondary);
+		}
+		
+		body.page-about hr {
+			border-bottom: solid 2px var(--about-secondary);
+		}
+		
+		body.page-skills hr {
+			border-bottom: solid 2px var(--skills-secondary);
+		}
+		
+		body.page-interests hr {
+			border-bottom: solid 2px var(--interests-secondary);
 		}
 
 	.align-left {
@@ -2408,6 +2446,23 @@ input, select, textarea {
 			border-radius: 0;
 			padding: 0;
 		}
+		
+		/* Page-specific box borders */
+		body.page-home .box {
+			border: solid 2px var(--home-secondary);
+		}
+		
+		body.page-about .box {
+			border: solid 2px var(--about-secondary);
+		}
+		
+		body.page-skills .box {
+			border: solid 2px var(--skills-secondary);
+		}
+		
+		body.page-interests .box {
+			border: solid 2px var(--interests-secondary);
+		}
 
 /* Icon */
 
@@ -2734,6 +2789,23 @@ input, select, textarea {
 				top: 0;
 				width: 2.5em;
 			}
+			
+			/* Page-specific contact icon borders */
+			body.page-home ul.contact li:before {
+				border: solid 2px var(--home-secondary);
+			}
+			
+			body.page-about ul.contact li:before {
+				border: solid 2px var(--about-secondary);
+			}
+			
+			body.page-skills ul.contact li:before {
+				border: solid 2px var(--skills-secondary);
+			}
+			
+			body.page-interests ul.contact li:before {
+				border: solid 2px var(--interests-secondary);
+			}
 
 			ul.contact li:first-child {
 				margin-top: 0;
@@ -2849,6 +2921,23 @@ body.page-interests ul.pagination li > .page.active {
 			border: solid 1px rgba(255, 255, 255, 0.125);
 			border-left: 0;
 			border-right: 0;
+		}
+		
+		/* Page-specific table borders */
+		body.page-home table tbody tr {
+			border-color: var(--home-secondary);
+		}
+		
+		body.page-about table tbody tr {
+			border-color: var(--about-secondary);
+		}
+		
+		body.page-skills table tbody tr {
+			border-color: var(--skills-secondary);
+		}
+		
+		body.page-interests table tbody tr {
+			border-color: var(--interests-secondary);
 		}
 
 			table tbody tr:nth-child(2n + 1) {
@@ -3351,6 +3440,23 @@ body.page-interests ul.pagination li > .page.active {
 			margin-bottom: 0.8em;
 			padding-bottom: 0.4em;
 		}
+		
+		/* Page-specific banner heading borders */
+		body.page-home #banner h2 {
+			border-bottom: solid 2px var(--home-secondary);
+		}
+		
+		body.page-about #banner h2 {
+			border-bottom: solid 2px var(--about-secondary);
+		}
+		
+		body.page-skills #banner h2 {
+			border-bottom: solid 2px var(--skills-secondary);
+		}
+		
+		body.page-interests #banner h2 {
+			border-bottom: solid 2px var(--interests-secondary);
+		}
 
 		#banner p {
 			-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, -moz-filter 0.25s ease;
@@ -3479,6 +3585,23 @@ body.page-interests ul.pagination li > .page.active {
 			font-size: 2em;
 			margin-bottom: 0.8em;
 			padding-bottom: 0.4em;
+		}
+		
+		/* Page-specific wrapper header borders */
+		body.page-home #wrapper > header h2 {
+			border-bottom: solid 2px var(--home-secondary);
+		}
+		
+		body.page-about #wrapper > header h2 {
+			border-bottom: solid 2px var(--about-secondary);
+		}
+		
+		body.page-skills #wrapper > header h2 {
+			border-bottom: solid 2px var(--skills-secondary);
+		}
+		
+		body.page-interests #wrapper > header h2 {
+			border-bottom: solid 2px var(--interests-secondary);
 		}
 
 		#wrapper > header p {
@@ -4056,13 +4179,13 @@ body.page-other #one.wrapper.spotlight {
 body.page-home #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles.png');
 	opacity: 0.75;
-	animation: slide-left 40s linear infinite;
+	animation: slide-diagonal-down-left 40s linear infinite;
 }
 
 body.page-about #page-wrapper:before {
 	background-image: url('../../images/tiles/tiles_about.png');
 	opacity: 0.75;
-	animation: slide-right 40s linear infinite;
+	animation: slide-diagonal-up-right 40s linear infinite;
 }
 
 body.page-skills #page-wrapper:before {
@@ -4161,11 +4284,7 @@ body.page-other #page-wrapper:before {
 
 /* Page-specific One Section for home page */
 body.page-home #one.wrapper.spotlight {
-    background-color: var(--home-primary);
-}
-
-body.page-home #one.wrapper.spotlight {
-    background-color: var(--home-primary);
+    background-color: var(--home-secondary);
 }
 
 /* Animation utility classes for combined movements */
