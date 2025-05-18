@@ -3574,11 +3574,11 @@ body.page-other .wrapper {
 		.wrapper:before, .wrapper:after {
 			content: '';
 			display: block;
-			height: 6.5em;
 			position: absolute;
 			width: 100%;
-			background-repeat: no-repeat;
-			background-size: 100% 100%;
+			height: 6.5em;
+			background-color: inherit;
+			clip-path: polygon(100% 0, 100% 100%, 0 100%);
 		}
 
 		.wrapper:before {
@@ -3587,26 +3587,17 @@ body.page-other .wrapper {
 		}
 
 		.wrapper:after {
-			-moz-transform: scaleY(-1);
-			-webkit-transform: scaleY(-1);
-			-ms-transform: scaleY(-1);
-			transform: scaleY(-1);
 			bottom: -6.5em;
 			left: 0;
+			transform: rotate(180deg);
 		}
 
 		.wrapper.alt:before {
-			-moz-transform: scaleX(-1);
-			-webkit-transform: scaleX(-1);
-			-ms-transform: scaleX(-1);
 			transform: scaleX(-1);
 		}
 
 		.wrapper.alt:after {
-			-moz-transform: scaleY(-1) scaleX(-1);
-			-webkit-transform: scaleY(-1) scaleX(-1);
-			-ms-transform: scaleY(-1) scaleX(-1);
-			transform: scaleY(-1) scaleX(-1);
+			transform: scaleX(-1) rotate(180deg);
 		}
 
 		.wrapper .inner {
